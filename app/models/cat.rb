@@ -1,6 +1,15 @@
 class Cat < ApplicationRecord
+  COLORS = [
+    "Black",
+    "Grey",
+    "White",
+    "Orange",
+    "Tabby"
+  ]
+
   validates :birth_date, :color, :name, :sex, :description, presence: true
   validate :sex_format
+  validates_inclusion_of :color, :in => COLORS
   
     def age
       obj_age = Date.today.year - birth_date.year 
