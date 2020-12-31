@@ -8,3 +8,6 @@
 
 Cat.create!(name: "Pikachu", color: "Orange", birth_date: "2015-12-21", sex: "M", description: "Aggressively cuddly, yet independent")
 Cat.create!(name: "Olive", color: "Black", birth_date: "2017-04-08", sex: "F", description: "Indoor only, calm temperment")
+
+CatRentalRequest.create!(cat_id: 1, start_date: "2021-01-15", end_date: "2021-01-22")
+CatRentalRequest.create!(cat_id: 2, start_date: "2021-02-12", end_date: "2021-02-16")
