@@ -14,3 +14,18 @@
     <td><%= @cat.description %></td>
   </tr>
 </table>
+
+<br><br>
+<h3>Rental Requests for <%= @cat.name %>:</h3>
+<table>
+  <tr>
+    <th>Start date</th>
+    <th>End date</th>
+  </tr>
+  <% @rental_requests.each do |request| %>
+    <tr>
+      <td><%= request.start_date %></td>
+      <td><%= request.end_date %></td>
+    </tr>
+  <% end %>
+</table>
