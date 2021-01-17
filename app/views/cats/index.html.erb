@@ -1,7 +1,12 @@
- <h1>All the cats!</h1>
+ 
+<div class="main">
+  <div class="sub-header">
+    <h2>all of the cats in the world</h2>
+    <a href="#">Add cat<img src="" alt=""></a>
+  </div>
 
-<ul>
-  <% @cats.each do |cat| %>
-    <li><%= link_to "#{cat.name}", cat_url(cat) %></li>
-  <%end%>
-</ul>
+  <ul>
+    <% @cats.each do |cat| %>
+     <li><%= link_to "#{cat.name}", cat_url(cat) %></li>
+    <%end%>
+  </ul>

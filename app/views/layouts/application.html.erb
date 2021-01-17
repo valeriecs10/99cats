@@ -5,11 +5,22 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header>
+      <div class="header-logo-wrapper"><a href="#" class="header-logo">99 Cats</a> </div>
+      <div class="header-nav-wrapper">
+        <ul class="header-nav">
+          <li><a href="#">Sign in</a></li>
+          <li><a href="#">Sign up</a></li>
+        </ul>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>

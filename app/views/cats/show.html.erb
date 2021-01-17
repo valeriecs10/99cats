@@ -21,11 +21,21 @@
   <tr>
     <th>Start date</th>
     <th>End date</th>
+    <th>Status</th>
   </tr>
-  <% @rental_requests.each do |request| %>
+  <% @current_rental_requests.each do |request| %>
     <tr>
       <td><%= request.start_date %></td>
       <td><%= request.end_date %></td>
+      <td><%= request.status %></td>
+      <% if request.status == "PENDING" %>
+      <td><form action="/cat_rental_requests/<%= request.id %>/approve" method="get">
+        <input type="submit" value="Approve">
+      </form></td>
+      <td><form action="/cat_rental_requests/<%= request.id %>/deny" method="get">
+        <input type="submit" value="Deny">
+      </form></td>
+      <% end %>
     </tr>
   <% end %>
 </table>
