@@ -11,3 +11,5 @@ Cat.create!(name: "Olive", color: "Black", birth_date: "2017-04-08", sex: "F", d
 
 CatRentalRequest.create!(cat_id: 1, start_date: "2021-01-15", end_date: "2021-01-22")
 CatRentalRequest.create!(cat_id: 2, start_date: "2021-02-12", end_date: "2021-02-16")
+CatRentalRequest.create!(cat_id: 1, start_date: "2021-02-12", end_date: "2021-02-16")
+CatRentalRequest.create!(cat_id: 1, start_date: "2021-01-01", end_date: "2021-03-31")
